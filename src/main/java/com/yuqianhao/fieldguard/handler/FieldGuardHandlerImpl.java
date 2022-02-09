@@ -48,7 +48,7 @@ public class FieldGuardHandlerImpl {
     private static void handlerGuard(Object object,Object value,Field field,Annotation annotation){
         if(annotation instanceof FieldEmptyText){
             FieldEmptyText  fieldEmptyText= (FieldEmptyText) annotation;
-            if(value==null || value.toString().length()!=0){
+            if(value==null || value.toString().length()==0){
                 throwException(field, fieldEmptyText.message());
             }
         }
