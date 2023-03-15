@@ -9,7 +9,7 @@
     <!-- Jar包名称 -->
     <artifactId>FieldGuard</artifactId>
     <!-- 版本号 -->
-    <version>1.0.4</version>
+    <version>1.0.5</version>
     <!-- 项目名称 -->
     <name>FieldGuard</name>
     <!-- 项目地址 -->
