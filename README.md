@@ -37,9 +37,29 @@ public class TestClass{
 
 这样，检查工作将会变得轻松。
 
+我们可以通过主动调用``FieldGuard.filter()``方法来完成对象的字段检查。
+
 ```java
 public void method(TestClass test){
     FieldGuard.filter(test);
+}
+```
+
+也可以将被检查的对象继承自``FieldVerify``来完成检查。
+
+```java
+public class TestClass extends FieldVerify{
+    
+    @FieldTextLength(min=6,max=16,message="TestClass对象的password字段长度不正确。")
+    @FieldNotNull(message="TestClass对象的password字段不可空。")
+    public String password;
+    
+}
+```
+
+```java
+public void method(TestClass test){
+    // 无需在这里主动检查test对象，当test对象被创建的时候就会被主动检查
 }
 ```
 
@@ -51,7 +71,7 @@ public void method(TestClass test){
 <dependency>
   <groupId>com.yuqianhao</groupId>
   <artifactId>FieldGuard</artifactId>
-  <version>1.0.4</version>
+  <version>1.0.5</version>
 </dependency>
 ```
 
