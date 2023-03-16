@@ -71,8 +71,12 @@ public void method(TestClass test){
 <dependency>
   <groupId>com.yuqianhao</groupId>
   <artifactId>FieldGuard</artifactId>
-  <version>1.0.5</version>
+  <version>1.0.6</version>
 </dependency>
+```
+
+```groovy
+implementation group: 'com.yuqianhao', name: 'FieldGuard', version: '1.0.6'
 ```
 
 ### 2、预设字段警卫注解
